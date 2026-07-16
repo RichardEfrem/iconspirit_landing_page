@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
+import PageTexture from "@/components/PageTexture";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -91,6 +92,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <PageTexture />
         {children}
       </body>
     </html>
